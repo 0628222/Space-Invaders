@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Menu/AutoFiring.gd" type="Script" id=1]
+[ext_resource path="res://Menu/Return.gd" type="Script" id=2]
 
 [node name="Options" type="Control"]
 anchor_right = 1.0
@@ -48,7 +49,10 @@ margin_right = 767.879
 margin_bottom = 79.0205
 rect_rotation = 0.342001
 text = "Return to Main menu"
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="HBoxContainer/AutoFiring" to="HBoxContainer/AutoFiring" method="_on_AutoFiring_pressed"]
+[connection signal="pressed" from="Return" to="HBoxContainer/AutoFiring" method="_on_Return_pressed"]
+[connection signal="pressed" from="Return" to="Return" method="_on_Return_pressed"]
