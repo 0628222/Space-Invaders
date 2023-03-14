@@ -19,4 +19,12 @@ func _ready():
 	# Debugging.
 	print(GlobalVariables.scoringInformation["highScores"])
 	
-
+func saveData():
+	var file = File.new()
+	var error = file.open(GlobalVariables.saveFile, file.WRITE)
+	if error == OK:
+		file.store_var(GlobalVariables.scoringInformation)
+		file.close()
+		print("!!Data Saved")
+	else :
+		print("!!Data Not Saved")

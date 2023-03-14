@@ -106,8 +106,10 @@ shape = SubResource( 2 )
 position = Vector2( 705.16, 3.84076 )
 script = ExtResource( 5 )
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 226.241, 73.6566 )
+[node name="Enemy" parent="Enemies" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+position = Vector2( 225.241, 73.6566 )
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( 332.707, 74.3564 )

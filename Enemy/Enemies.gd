@@ -8,5 +8,6 @@ func _ready():
 
 
 func _physics_process(delta):
-	pass 
-	#move_and_collide(Vector2(speed * delta, 0))
+	global_position.x += speed * delta
+	
+	 
