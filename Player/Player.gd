@@ -28,8 +28,7 @@ func _physics_process(delta):
 		if position.x < 1280:
 			move_and_collide(Vector2(movement_speed * delta, 0))
 	if Input.is_action_pressed("ui_up"):
-		if position.y > 0:
-			move_and_collide(Vector2( 0, -movement_speed * delta))
+
 	if Input.is_action_pressed("ui_down"):
 		if position.y < 1280:
 			move_and_collide(Vector2( 0, movement_speed * delta))
