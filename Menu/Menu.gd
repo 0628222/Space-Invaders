@@ -15,3 +15,10 @@ func _on_button_pressed(scene_to_load):
 			var player_data = file.get_var()
 			file.close()
 			GlobalVariables.scoringInformation = player_data
+
+
+onready var anim = $AnimationPlayer
+
+func _ready():
+
+	anim.play("Opening GIF")
