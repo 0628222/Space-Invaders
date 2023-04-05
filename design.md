@@ -29,7 +29,7 @@ gantt
     tickInterval 3week
     
     section Holidays 
-    School Holidays:09-04-23, 22-04-23
+    School Holidays:09-04-23, 23-04-23
 
     section Design 
     Project Overview:05-04-23, 1d
