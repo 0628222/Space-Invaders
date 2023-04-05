@@ -34,4 +34,12 @@ gantt
     section Design 
     Project Overview:05-04-23, 1d
     Project Plan:05-04-23, 24-04-23
+
+    section Implemtation
+    Boss/Special:05-04-23, 1d
+    Powerups: 05-04-23, 1d
+    UI: 05-04-23, 1d
+    Levels: 05-04-23, 1d
+    Testing: 05-04-23, 1d
+    Final Submission: 07-06-23 1d
 ```
