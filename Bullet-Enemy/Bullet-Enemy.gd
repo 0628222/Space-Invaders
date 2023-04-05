@@ -22,6 +22,5 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.name == ("the_razor_crest___top_view_by_superherotimefan_deaq55q-pre.png"):
-		if body.name == "shot":
-			print("bullet")
-			queue_free()
+		get_tree().change_scene("res://MainGame/lose.tscn")
+
