@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/the_razor_crest___top_view_by_superherotimefan_deaq55q-pre.png-b38ee05821c888e56bd04a20c84438b1.stex"
+path="res://.import/the_razor_crest___top_view_by_superherotimefan_deaq55q-pre.png-c89b34ed689b999cf3f93432ecaa873b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/the_razor_crest___top_view_by_superherotimefan_deaq55q-pre.png"
-dest_files=[ "res://.import/the_razor_crest___top_view_by_superherotimefan_deaq55q-pre.png-b38ee05821c888e56bd04a20c84438b1.stex" ]
+source_file="res://Images/Images/the_razor_crest___top_view_by_superherotimefan_deaq55q-pre.png"
+dest_files=[ "res://.import/the_razor_crest___top_view_by_superherotimefan_deaq55q-pre.png-c89b34ed689b999cf3f93432ecaa873b.stex" ]
 
 [params]
 

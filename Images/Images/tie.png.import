@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tie.png-98a1f574e2b6e56c8b27c3eeddca894b.stex"
+path="res://.import/tie.png-5243c034c7e6b201e31c6bddaf178e19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/tie.png"
-dest_files=[ "res://.import/tie.png-98a1f574e2b6e56c8b27c3eeddca894b.stex" ]
+source_file="res://Images/Images/tie.png"
+dest_files=[ "res://.import/tie.png-5243c034c7e6b201e31c6bddaf178e19.stex" ]
 
 [params]
 

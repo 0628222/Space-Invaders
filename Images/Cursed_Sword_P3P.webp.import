@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bullet-enemy.png-db35261ad390287c9c4660d72e7143a6.stex"
+path="res://.import/Cursed_Sword_P3P.webp-4c348ab6b5e6f1ba1e3b8eb0d4a6838d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Images/bullet-enemy.png"
-dest_files=[ "res://.import/bullet-enemy.png-db35261ad390287c9c4660d72e7143a6.stex" ]
+source_file="res://Images/Cursed_Sword_P3P.webp"
+dest_files=[ "res://.import/Cursed_Sword_P3P.webp-4c348ab6b5e6f1ba1e3b8eb0d4a6838d.stex" ]
 
 [params]
 

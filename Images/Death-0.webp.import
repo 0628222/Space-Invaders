@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bullet-enemy.png-db35261ad390287c9c4660d72e7143a6.stex"
+path="res://.import/Death-0.webp-8a099981a8d7eb24cb0477aa5a9c8d5b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Images/bullet-enemy.png"
-dest_files=[ "res://.import/bullet-enemy.png-db35261ad390287c9c4660d72e7143a6.stex" ]
+source_file="res://Images/Death-0.webp"
+dest_files=[ "res://.import/Death-0.webp-8a099981a8d7eb24cb0477aa5a9c8d5b.stex" ]
 
 [params]
 
