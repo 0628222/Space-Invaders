@@ -161,20 +161,21 @@ text = "Copyright Peter Chisholm 2023(totally not stolen)."
 position = Vector2( 1585, 293.401 )
 scale = Vector2( 1.02292, 0.98646 )
 texture = ExtResource( 8 )
-vframes = 9
 hframes = 5
+vframes = 9
 frame = 1
 
 [node name="Sprite" type="Sprite" parent="Sprite"]
 position = Vector2( -299.227, 90.3278 )
 scale = Vector2( 0.738294, 0.69681 )
 texture = ExtResource( 9 )
-vframes = 2
 hframes = 5
+vframes = 2
 frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Opening GIF" = SubResource( 2 )
+
 [connection signal="pressed" from="Layout/Main/Buttons/GameScenes/Start Game Button" to="Layout/Main/Buttons/GameScenes/Start Game Button" method="_on_Start_Game_Button_pressed"]
 [connection signal="pressed" from="Layout/Main/Buttons/GameScenes/Options" to="Layout/Main/Buttons/GameScenes/Options" method="_on_Options_pressed"]
 [connection signal="pressed" from="Layout/Main/Buttons/GameScenes/Quit" to="Layout/Main/Buttons/GameScenes/Quit" method="_on_Quit_pressed"]
