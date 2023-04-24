@@ -19,27 +19,24 @@ Multiple weapons including bows and Bo-Hiya, the Bo-Hiya will be used for three 
 # Behaviour - User Journey
 
 
-# Planning Diagram - Project Plan 
 
-```mermaid 
+# Project Plan 
+ ``` mermaid 
 gantt
-    title Seige of Odawara Castle Project Plan
-    dateFormat DD-MM-YY
-    dateFormat %d-%B
-    tickInterval 3week
-    
-    section Holidays 
-    School Holidays:09-03-23, 23-04-23
+     title Seige of Odawara Castle Project Plan
+     dateFormat DD-MM-YY
+     axisFormat %d-%B
+     tickInterval 3week
 
-    section Design 
-    Project Overview:05-04-23, 1d
-    Project Plan:05-04-23, 24-04-23
-
-    section Implemtation
-    Boss/Special:05-04-23, 1d
-    Powerups: 05-04-23, 1d
-    UI: 05-04-23, 1d
-    Levels: 05-04-23, 1d
-    Testing: 05-04-23, 1d
-    Final Submission: 07-06-23 1d
+     section Design 
+     Project Overview:20-04-23, 7d
+     Project Plan:27-04-23, 7d
+     
+     section Implemtation
+     Boss/Special:07-05-23, 6d
+     Powerups:13-05-23, 2d
+     UI:04-05-23, 3d
+     Levels:15-05-23, 5d
+     Testing:01-05-23, 07-06-23
+     Final Submission:07-06-23, 1d
 ```
