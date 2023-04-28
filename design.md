@@ -56,5 +56,6 @@ title Gameplay
     
     section game end 
         load up win screen: lose screen if they lost 
-        Return to main menu: 
+        Return to main menu: Play again?
+        Quit out if they don't want to play anymore: 
 
