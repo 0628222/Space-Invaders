@@ -36,7 +36,25 @@ gantt
      Boss/Special:07-05-23, 6d
      Powerups:13-05-23, 2d
      UI:04-05-23, 3d
+     Find suitable Images:13-05-23, 1d 
      Levels:15-05-23, 5d
      Testing:01-05-23, 07-06-23
      Final Submission:07-06-23, 1d
 ```
+
+```mermaid 
+journey 
+title Gameplay
+    section Main Menu 
+        Load up game: 3 Menu screen: 
+        Look at options (optional): Option menu:
+        Click on play game: load main game screen:  
+    section Main game 
+        Main game loads: Player starts moving
+        Enemy moves and shoots: Player starts dodging and firing back 
+        stage completed: next stage starts up  
+    
+    section game end 
+        load up win screen: lose screen if they lost 
+        Return to main menu: 
+
