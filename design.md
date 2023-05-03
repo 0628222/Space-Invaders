@@ -58,4 +58,35 @@ title Gameplay
         load up win screen: lose screen if they lost 
         Return to main menu: Play again?
         Quit out if they don't want to play anymore: 
+```
+
+```mermaid
+flowchart TD   
+    Start(UI) --> 
+    change(look to make more like game) -->
+    check -->
+    finish(finalize look and implement) 
+```
+
+```mermaid 
+flowchart TD
+    Start(Boss/special) -->
+    design(Create Boss and Special) --> 
+    Code(Boss and Special) -->
+    test(If working implement in not fix)
+```
+
+``` Mermaid
+flowchart TD
+    Start(Powerups) -->
+    Create(Powerups look) -->
+    Code(functionality of Powerups) -->
+    Test(if needed fix and or change)
+```
+
+```mermaid 
+flowchart TD 
+    Start(Levels) -->
+    Think(differences between levels) -->
+    implement(Test)
 
