@@ -32,6 +32,7 @@ window/size/height=720
 
 render=false
 fire=false
+"custom font"=false
 
 [input]
 
