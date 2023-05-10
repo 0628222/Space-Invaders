@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Special Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Images/ezgif.com-gif-maker.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.3906, 20.6822 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "SpecialEnemyGIF"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 9.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 2 ), ExtResource( 2 ) ]
+}
+
+[node name="Special Enemy" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+scale = Vector2( 0.837702, 0.896138 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 350.96, 392.796 )
+scale = Vector2( 16.4923, 6.4206 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 354.326, 391.528 )
+rotation = 3.13438
+scale = Vector2( 0.990252, -1.08753 )
+texture = ExtResource( 2 )
+hframes = 5
+vframes = 14
+frame = 33
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D/Sprite"]
+root_node = NodePath("../../..")
+autoplay = "SpecialEnemyGIF"
+anims/SpecialEnemyGIF = SubResource( 2 )

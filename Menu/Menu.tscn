@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://MainGame/Noto_Sans_Cham/NotoSansCham-VariableFont_wght.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Menu/PaletteMosaic-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Player/Oswald/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Menu/buttonFont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Menu/Start Game Button.gd" type="Script" id=4]
 [ext_resource path="res://Menu/Options.gd" type="Script" id=5]
@@ -10,17 +10,20 @@
 [ext_resource path="res://ezgif.com-gif-maker(4).png" type="Texture" id=8]
 [ext_resource path="res://ezgif.com-gif-maker(6).png" type="Texture" id=9]
 
-[sub_resource type="DynamicFont" id=1]
-size = 55
-outline_size = 3
-outline_color = Color( 0.227451, 0.505882, 0.188235, 1 )
+[sub_resource type="DynamicFont" id=4]
+size = 50
+outline_size = 5
+outline_color = Color( 0, 0.717647, 0.956863, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 30
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=5]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Opening GIF"
@@ -76,37 +79,38 @@ size_flags_vertical = 3
 
 [node name="Title" type="HBoxContainer" parent="Layout"]
 margin_right = 1118.0
-margin_bottom = 80.0
+margin_bottom = 75.0
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="Label" type="Label" parent="Layout/Title"]
 margin_right = 1118.0
-margin_bottom = 80.0
+margin_bottom = 75.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 1 )
-text = "Altitude colonization"
+custom_colors/font_color = Color( 0.00392157, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Siege of odawara castle"
 align = 1
 
 [node name="Main" type="HBoxContainer" parent="Layout"]
-margin_top = 84.0
+margin_top = 79.0
 margin_right = 1118.0
 margin_bottom = 661.0
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="Layout/Main"]
 margin_right = 1118.0
-margin_bottom = 577.0
+margin_bottom = 582.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="GameScenes" type="VBoxContainer" parent="Layout/Main/Buttons"]
 margin_right = 1118.0
-margin_bottom = 98.0
+margin_bottom = 147.0
 
 [node name="Start Game Button" type="Button" parent="Layout/Main/Buttons/GameScenes"]
 margin_right = 1118.0
-margin_bottom = 30.0
+margin_bottom = 51.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
@@ -115,11 +119,12 @@ script = ExtResource( 4 )
 scene_to_load = "res://MainGame.tscn"
 
 [node name="Options" type="Button" parent="Layout/Main/Buttons/GameScenes"]
-margin_top = 34.0
+margin_top = 55.0
 margin_right = 1118.0
-margin_bottom = 64.0
+margin_bottom = 99.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_colors/font_color = Color( 0.992157, 0, 1, 1 )
 custom_fonts/font = ExtResource( 3 )
 text = "Options"
 script = ExtResource( 5 )
@@ -128,11 +133,15 @@ __meta__ = {
 }
 
 [node name="Quit" type="Button" parent="Layout/Main/Buttons/GameScenes"]
-margin_top = 68.0
+margin_top = 103.0
 margin_right = 1118.0
-margin_bottom = 98.0
+margin_bottom = 147.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource( 5 )
+custom_colors/font_color_disabled = Color( 1, 0.0470588, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 0.996078, 0, 0, 1 )
 custom_fonts/font = ExtResource( 3 )
 text = "Quit"
 script = ExtResource( 7 )
@@ -151,20 +160,20 @@ margin_bottom = 14.0
 text = "Copyright Peter Chisholm 2023(totally not stolen)."
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1585, 293.401 )
+position = Vector2( 1550.92, 336.296 )
 scale = Vector2( 1.02292, 0.98646 )
 texture = ExtResource( 8 )
 hframes = 5
 vframes = 9
-frame = 1
+frame = 2
 
 [node name="Sprite" type="Sprite" parent="Sprite"]
-position = Vector2( -299.227, 90.3278 )
+position = Vector2( -301.176, 120.527 )
 scale = Vector2( 0.738294, 0.69681 )
 texture = ExtResource( 9 )
 hframes = 5
 vframes = 2
-frame = 8
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Opening GIF" = SubResource( 2 )
