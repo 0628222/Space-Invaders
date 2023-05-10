@@ -19,9 +19,6 @@ margin_top = 0.23187
 margin_right = 1281.23
 margin_bottom = 720.232
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 countdownMax = 30
 
 [node name="HUD" type="HBoxContainer" parent="."]

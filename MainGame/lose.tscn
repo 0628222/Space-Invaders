@@ -26,8 +26,5 @@ margin_top = 7.0
 margin_right = 847.0
 margin_bottom = 79.0
 text = "You Lost Im going to eat your liver "
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="Layout" to="Layout" method="_on_Layout_pressed"]
