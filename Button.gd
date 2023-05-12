@@ -1,6 +1,6 @@
 extends Button
 
-onready var anim = $AnimationPlayer1
+onready var anim = $AnimationPlayer
 func _ready():
 	anim.play("SpecialEnemyGIF")
 
