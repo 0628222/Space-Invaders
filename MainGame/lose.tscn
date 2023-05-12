@@ -44,7 +44,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 13.3906, 20.6822 )
+extents = Vector2( 15.8941, 22.2656 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -66,8 +66,8 @@ anims/SpecialEnemyGIF = SubResource( 2 )
 scale = Vector2( 0.837702, 0.896138 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 75.3929, 107.107 )
-rotation = 0.0225166
+position = Vector2( 361.996, 385.87 )
+rotation = -0.00732252
 scale = Vector2( 16.4923, 6.4206 )
 shape = SubResource( 1 )
 
