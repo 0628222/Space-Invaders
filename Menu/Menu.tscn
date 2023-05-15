@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://MainGame/Noto_Sans_Cham/NotoSansCham-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Player/Oswald/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=2]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Menu/Quit.gd" type="Script" id=7]
 [ext_resource path="res://ezgif.com-gif-maker(4).png" type="Texture" id=8]
 [ext_resource path="res://ezgif.com-gif-maker(6).png" type="Texture" id=9]
-[ext_resource path="res://Player/Press_Start_2P/PressStart2P-Regular.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Images/Odawara.jpeg" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=4]
 size = 50
@@ -70,9 +70,6 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="DynamicFont" id=7]
-font_data = ExtResource( 10 )
-
 [node name="MenuMenu" type="Control"]
 anchor_left = 0.018
 anchor_top = 0.004
@@ -85,6 +82,14 @@ margin_bottom = -19.2963
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 380.0
+margin_top = -21.0
+margin_right = 1654.0
+margin_bottom = 709.0
+texture = ExtResource( 10 )
+expand = true
 
 [node name="Layout" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -174,8 +179,10 @@ margin_right = 1118.0
 margin_bottom = 679.0
 
 [node name="Label" type="Label" parent="Layout/Credits"]
-margin_right = 319.0
-margin_bottom = 14.0
+margin_right = 500.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.0627451, 0.709804, 1, 1 )
 text = "Copyright Peter Chisholm 2023(totally not stolen)."
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -192,25 +199,12 @@ scale = Vector2( 0.738294, 0.69681 )
 texture = ExtResource( 9 )
 hframes = 5
 vframes = 2
-frame = 6
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Opening GIF"
 "anims/Opening GIF" = SubResource( 2 )
 anims/RESET = SubResource( 6 )
-
-[node name="Label" type="Label" parent="."]
-anchor_right = 0.742
-anchor_bottom = 0.662
-margin_left = 1450.92
-margin_top = 280.296
-margin_right = 1490.36
-margin_bottom = -138.525
-rect_rotation = 89.4695
-rect_scale = Vector2( 0.461439, -0.775433 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 7 )
-text = "I'm Bethesada this is totally supposed to be here "
 
 [connection signal="pressed" from="Layout/Main/Buttons/GameScenes/Start Game Button" to="Layout/Main/Buttons/GameScenes/Start Game Button" method="_on_Start_Game_Button_pressed"]
 [connection signal="pressed" from="Layout/Main/Buttons/GameScenes/Options" to="Layout/Main/Buttons/GameScenes/Options" method="_on_Options_pressed"]

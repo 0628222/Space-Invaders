@@ -19,7 +19,7 @@ margin_top = 0.23187
 margin_right = 1281.23
 margin_bottom = 720.232
 script = ExtResource( 4 )
-countdownMax = 10
+countdownMax = 20
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_right = 40.0
@@ -183,7 +183,7 @@ position = Vector2( -364.372, 404.497 )
 position = Vector2( -255.601, 404.428 )
 
 [node name="Enemy30" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -579.789, 404.497 )
+position = Vector2( -578.392, 404.927 )
 
 [node name="Enemy31" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( -472.219, 404.428 )

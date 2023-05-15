@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Special Enemy.gd" type="Script" id=1]
+[ext_resource path="res://SpecialEnemy.gd" type="Script" id=1]
 [ext_resource path="res://Images/ezgif.com-gif-maker.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -9,7 +9,7 @@ extents = Vector2( 13.3906, 20.6822 )
 [sub_resource type="Animation" id=3]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("KinematicBody2D/Sprite:frame")
+tracks/0/path = NodePath("special_Enemy/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -26,7 +26,7 @@ resource_name = "SpecialEnemyGIF"
 length = 2.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("KinematicBody2D/Sprite:frame")
+tracks/0/path = NodePath("special_Enemy/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = false
 tracks/0/imported = false
@@ -39,18 +39,24 @@ tracks/0/keys = {
 }
 
 [node name="Special Enemy" type="Node2D"]
+
+[node name="special_Enemy" type="KinematicBody2D" parent="."]
+scale = Vector2( 0.837702, 0.896138 )
 script = ExtResource( 1 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-scale = Vector2( 0.837702, 0.896138 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="special_Enemy"]
 position = Vector2( 350.96, 392.796 )
 rotation = 1.55982
 scale = Vector2( 16.4923, 6.4206 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="special_Enemy"]
+root_node = NodePath("../..")
+autoplay = "SpecialEnemyGIF"
+anims/RESET = SubResource( 3 )
+anims/SpecialEnemyGIF = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="special_Enemy"]
 position = Vector2( 354.326, 391.528 )
 rotation = 4.71633
 scale = Vector2( 0.990252, -1.08753 )
@@ -58,9 +64,3 @@ texture = ExtResource( 2 )
 hframes = 5
 vframes = 14
 frame = 50
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D/Sprite"]
-root_node = NodePath("../../..")
-autoplay = "SpecialEnemyGIF"
-anims/RESET = SubResource( 3 )
-anims/SpecialEnemyGIF = SubResource( 2 )
