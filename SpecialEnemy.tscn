@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://SpecialEnemy.gd" type="Script" id=1]
-[ext_resource path="res://Images/ezgif.com-gif-maker.png" type="Texture" id=2]
+[ext_resource path="res://Images/SpecialFiring.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.3906, 20.6822 )
@@ -39,6 +39,7 @@ tracks/0/keys = {
 }
 
 [node name="Special Enemy" type="Node2D"]
+position = Vector2( 6, -110 )
 
 [node name="special_Enemy" type="KinematicBody2D" parent="."]
 scale = Vector2( 0.837702, 0.896138 )

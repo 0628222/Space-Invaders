@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ezgif.com-gif-maker.png-f36b1542080b27bd78a9ed3167469338.stex"
+path="res://.import/TopdownSamurai.png-f413852ed68b75bc0c4b6327f8f4e84d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/ezgif.com-gif-maker.png"
-dest_files=[ "res://.import/ezgif.com-gif-maker.png-f36b1542080b27bd78a9ed3167469338.stex" ]
+source_file="res://Images/TopdownSamurai.png"
+dest_files=[ "res://.import/TopdownSamurai.png-f413852ed68b75bc0c4b6327f8f4e84d.stex" ]
 
 [params]
 

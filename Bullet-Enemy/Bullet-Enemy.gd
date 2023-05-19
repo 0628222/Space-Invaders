@@ -19,8 +19,6 @@ func _physics_process(delta):
 			queue_free()
 			GlobalVariables.enemyBulletInstanceCount -= 1
 			print("Enemy Bullets: ", GlobalVariables.enemyBulletInstanceCount)
-
-func _on_Area2D_body_entered(body):
-	if body.name == ("the_razor_crest___top_view_by_superherotimefan_deaq55q-pre.png"):
-		get_tree().change_scene("res://MainGame/lose.tscn")
+			if "Player" in collidedObject.collider.name:
+				get_tree().change_scene("res://MainGame/lose.tscn")
 
