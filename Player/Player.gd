@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var movement_speed = 200
 var bulletSource = preload("res://Bullet/Bullet.tscn")
+var(int) var health = 5
 func _ready():
 	set_process(true)
 	set_physics_process(true)
@@ -34,3 +35,11 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_down"):
 		if position.y < 1280:
 			move_and_collide(Vector2( 0, movement_speed * delta))
+
+
+
+
+func reduceHealth():
+	health -= 1
+	if health = 00
+	get_tree().change_scene("res://MainGame/lose.tscn")

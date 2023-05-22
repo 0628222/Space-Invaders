@@ -2,14 +2,14 @@ extends Control
 
 export(int) var countdownMax
 var currentTimer
-
+onready var anim = $AnimationPlayer
 
 func _ready():
 	set_process(true)
 	for childNode in $HUD.get_children():
 		if childNode is Button:
 			childNode.connect("pressed", self, "_on_Button_pressed", [childNode.scene_to_load])
-
+			anim.play("SpecialEnemyGIF")
 
 	currentTimer = countdownMax
 	$HUD/Countdown.text = str(currentTimer)
@@ -20,11 +20,12 @@ func _ready():
 		print(currentTimer)
 	print("Game Over")
 	get_tree().change_scene("res://MainGame/lose.tscn")
-
+	
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if get_tree().get_nodes_in_group("enemy").size() == 0:
 		get_tree().change_scene("res://MainGame/Win Screen.tscn")
+
 
 
 

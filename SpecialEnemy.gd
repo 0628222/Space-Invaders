@@ -12,8 +12,8 @@ func hide_for_time(t):
 	yield(get_tree().create_timer(t), "timeout")
 	visible = true
 
-func 
-	get_node(SpecialFiring.png).hide_for_time(2.0)
+#func 
+	#get_node(SpecialFiring.png).hide_for_time(2.0)
 
 
 func _process(delta):
