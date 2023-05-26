@@ -56,35 +56,36 @@ margin_top = 50.0
 margin_right = 1094.0
 margin_bottom = 770.0
 script = ExtResource( 4 )
-countdownMax = 20
+countdownMax = 50
 
 [node name="HUD" type="HBoxContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 192.0
+margin_top = -15.0
+margin_right = 298.0
+margin_bottom = 25.0
+rect_scale = Vector2( 1.25774, 0.780143 )
 script = ExtResource( 6 )
 
-[node name="Countdown" type="Label" parent="HUD"]
-margin_top = 13.0
-margin_bottom = 27.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="CurrentScoreLabel" type="Label" parent="HUD"]
-margin_left = 4.0
 margin_top = 13.0
-margin_right = 90.0
+margin_right = 86.0
 margin_bottom = 27.0
 text = "Current Score"
 
 [node name="CurrentScore" type="Label" parent="HUD"]
-margin_left = 94.0
+margin_left = 90.0
 margin_top = 13.0
-margin_right = 102.0
+margin_right = 98.0
 margin_bottom = 27.0
 text = "0"
 
 [node name="Label" type="Label" parent="HUD"]
+margin_left = 102.0
+margin_top = 13.0
+margin_right = 102.0
+margin_bottom = 27.0
+
+[node name="Countdown" type="Label" parent="HUD"]
 margin_left = 106.0
 margin_top = 13.0
 margin_right = 106.0

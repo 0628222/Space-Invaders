@@ -2,12 +2,12 @@ extends KinematicBody2D
 
 var movement_speed = 200
 var bulletSource = preload("res://Bullet/Bullet.tscn")
-var(int) var health = 5
+#var(int) var export health = 5
 func _ready():
 	set_process(true)
 	set_physics_process(true)
 	
-# warning-ignore:unused_argument
+
 func _process(delta):
 # Auto Fire code
 	if GlobalVariables.automaticFiring:
@@ -39,7 +39,7 @@ func _physics_process(delta):
 
 
 
-func reduceHealth():
-	health -= 1
-	if health = 00
-	get_tree().change_scene("res://MainGame/lose.tscn")
+#func reduceHealth():
+	#health -= 1
+	#if health = 00
+	#get_tree().change_scene("res://MainGame/lose.tscn")
