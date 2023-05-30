@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://WinScene.gd" type="Script" id=1]
+[ext_resource path="res://MainGame/WinScene.gd" type="Script" id=1]
 [ext_resource path="res://MainGame/WinButton.gd" type="Script" id=2]
 [ext_resource path="res://Player/Titan_One/TitanOne-Regular.ttf" type="DynamicFontData" id=3]
 
