@@ -1,7 +1,7 @@
 extends KinematicBody2D
 onready var anim = $AnimationPlayer
 var bullet = preload("res://Bullet-Enemy/bullet-Special-Enemy.tscn")
-var health = 3
+export (int) var health = 3
 
 
 

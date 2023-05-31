@@ -2,14 +2,12 @@ extends Control
 
 export(int) var countdownMax
 var currentTimer
-onready var anim = $AnimationPlayer
 
 func _ready():
 	set_process(true)
 	for childNode in $HUD.get_children():
 		if childNode is Button:
 			childNode.connect("pressed", self, "_on_Button_pressed", [childNode.scene_to_load])
-			anim.play("SpecialEnemyGIF")
 
 	currentTimer = countdownMax
 	$HUD/Countdown.text = str(currentTimer)

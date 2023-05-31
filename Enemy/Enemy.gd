@@ -15,7 +15,9 @@ func _colliding(area):
 var bullet = preload("res://Bullet-Enemy/Bullet-Enemy.tscn")
 
 func _process(delta):
-#	while (true):
+	if GlobalVariables.player == null:
+		queue_free()
+#while (true):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(2.0, 30.0)

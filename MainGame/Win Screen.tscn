@@ -18,9 +18,6 @@ margin_right = 204.0
 margin_bottom = 73.0
 text = "Return to main Menu(Hate you) "
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 3.0
