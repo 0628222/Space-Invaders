@@ -41,4 +41,4 @@ func reduceHealth():
 	health -= 1
 	if health == 0:
 		GlobalVariables.Player = null
-		get_tree().change_scene("res://MainGame/lose.tscn")
+		get_tree().change_scene("res://mainGame/lose.tscn")

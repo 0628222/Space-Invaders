@@ -3,10 +3,10 @@
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
+[ext_resource path="res://MainGame/mainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
-[ext_resource path="res://Player/Bo-Hiya_Spawner.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/bo-Hiya_Spawner.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )

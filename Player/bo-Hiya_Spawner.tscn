@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="bo-Hiya-Timer" type="Node2D"]
+
+[node name="container" type="Node" parent="."]
+
+[node name="bo-HiyaTimer" type="Timer" parent="container"]

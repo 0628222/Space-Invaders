@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Enemy/SpecialEnemy.gd" type="Script" id=1]
+[ext_resource path="res://Enemy/specialEnemy.gd" type="Script" id=1]
 [ext_resource path="res://Images/SpecialFiring.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]

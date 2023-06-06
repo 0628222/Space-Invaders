@@ -11,6 +11,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	if GlobalVariables.Player == null:
+		queue_free() 
 	var collidedObject = move_and_collide(Vector2(0, +speed*delta*0.4))
 	if (collidedObject):
 		#print("Enemy collide: ",collidedObject.collider.name)
@@ -24,4 +26,4 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.name == ("player"):
-		get_tree().change_scene("res://MainGame/lose.tscn")
+		get_tree().change_scene("res://mainGame/lose.tscn")

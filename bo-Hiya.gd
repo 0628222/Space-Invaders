@@ -9,4 +9,4 @@ func _ready():
 func _process(delta):
 	translate(velocity * delta)
 	if get_position().y - spriteSize >= get_viewport_rect().size.y:
-		queuefree()
+		queue_free()

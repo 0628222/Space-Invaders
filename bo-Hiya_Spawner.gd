@@ -1,6 +1,6 @@
 extends Area2D
 
-const powerup = preload("res://Player/Bo-Hiya.tscn")
+const powerup = preload("res://Player/bo-Hiya.tscn")
 onready var timer_started = false 
 
 
@@ -10,8 +10,8 @@ func _ready():
 func _process(delta):
 	#set timer
 	if timer_started == false:
-		$Bo_Hiya_Timer.wait_time = rand_range(1.0, 2.0)
-		$Bo_Hiya_Timer.start 
+		$bo_Hiya_Timer.wait_time = rand_range(1.0, 2.0)
+		$bo_Hiya_Timer.start() 
 		timer_started = true
 
 
@@ -24,6 +24,6 @@ func _on_Bo_hiya_timeout():
 	aPow.position = aPos 
 	$Container.add_child(aPow)
 	#set timer again 
-	$Bo_Hiya_Timer.wait_time = rand_range(0.5, 2.0)
-	$Bo_Hiya.start() 
+	$bo_Hiya_Timer.wait_time = rand_range(0.5, 2.0)
+	$bo_Hiya.start() 
 	
