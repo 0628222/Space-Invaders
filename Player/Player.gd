@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var movement_speed = 200
-export (int) var health = 5
+export (int) var health = 20 
 var bulletSource = preload("res://Bullet/Bullet.tscn")
 func _ready():
 	set_process(true)
@@ -22,7 +22,7 @@ func _process(delta):
 			var bulletInstance = bulletSource.instance()
 			bulletInstance.position = Vector2(position.x, position.y-20)
 			get_tree().get_root().add_child(bulletInstance)
-	
+#this allows the player to move around
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_left"):
 		if position.x > 10:
@@ -36,7 +36,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_down"):
 		if position.y < 1280:
 			move_and_collide(Vector2( 0, movement_speed * delta))
-
+#this will reduce the Health of a player which will then remove the Hp of the player
 func reduceHealth():
 	health -= 1
 	if health == 0:

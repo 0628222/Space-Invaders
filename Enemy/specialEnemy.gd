@@ -4,7 +4,7 @@ var bullet = preload("res://Bullet-Enemy/bullet-Special-Enemy.tscn")
 export (int) var health = 3
 
 
-
+#this makes the gif play for them to shoot
 func _ready():
 	anim.play("SpecialEnemyGIF")
 
@@ -27,7 +27,7 @@ func _process(delta):
 		var bulletInstance = bullet.instance()
 		bulletInstance.position = Vector2(global_position.x, global_position.y+20)
 		get_tree().get_root().add_child(bulletInstance)
-
+# this reduces the health of the special enemy 
 func reduceHealth():
 	health -= 1
 	if health == 0:

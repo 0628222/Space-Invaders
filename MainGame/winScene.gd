@@ -1,7 +1,7 @@
 extends Node2D
 
 
-
+#this handles the scoring system
 func _ready():
 	# Sorts the array
 	GlobalVariables.scoringInformation["highScores"].sort()
