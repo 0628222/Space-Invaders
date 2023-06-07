@@ -18,7 +18,7 @@ func _ready():
 		print(currentTimer)
 	print("Game Over")
 	get_tree().change_scene("res://mainGame/lose.tscn")
-#this checks the scoring system and if all enemies are dead then go on to level 2
+#this checks the scoring system and if all enemies are dead then go on to level 2 
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if get_tree().get_nodes_in_group("enemy").size() == 0:

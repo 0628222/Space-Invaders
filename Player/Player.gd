@@ -1,13 +1,12 @@
 extends KinematicBody2D
 
 var movement_speed = 200
-export (int) var health = 20 
+export (int) var health = 5 
 var bulletSource = preload("res://Bullet/Bullet.tscn")
 func _ready():
 	set_process(true)
 	set_physics_process(true)
 	GlobalVariables.Player = self 
-	
 
 func _process(delta):
 # Auto Fire code
