@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Player/bo-Hiya_Spawner.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Images/hud_heartFull.png" type="Texture" id=8]
 [ext_resource path="res://MainGame/Health.gd" type="Script" id=9]
+[ext_resource path="res://Images/AnimeSchoolRooftop.jpg" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -23,6 +24,14 @@ margin_right = 1094.0
 margin_bottom = 770.0
 script = ExtResource( 4 )
 countdownMax = 50
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -9.0
+margin_top = -41.0
+margin_right = 1461.0
+margin_bottom = 725.0
+texture = ExtResource( 10 )
+expand = true
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_left = 192.0

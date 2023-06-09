@@ -14,8 +14,6 @@ func update_health(value):
 			update_simple(value)
 		MODES.empty:
 			update_empty(value)
-		MODES.partial:
-			update_partial(value)
 
 func update_simple(value):
 	for i in get_child_count():

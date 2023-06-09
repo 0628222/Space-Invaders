@@ -10,3 +10,6 @@ func _process(delta):
 	translate(velocity * delta)
 	if get_position().y - spriteSize >= get_viewport_rect().size.y:
 		queue_free()
+
+func _on_BoHiya_body_entered(body: KinematicBody2D):
+	queue_free()
