@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Player/bo-Hiya_Spawner.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Images/hud_heartFull.png" type="Texture" id=8]
+[ext_resource path="res://MainGame/Health.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -31,29 +33,69 @@ rect_scale = Vector2( 1.25774, 0.780143 )
 script = ExtResource( 6 )
 
 [node name="CurrentScoreLabel" type="Label" parent="HUD"]
-margin_top = 13.0
+margin_top = 15.0
 margin_right = 86.0
-margin_bottom = 27.0
+margin_bottom = 29.0
 text = "Current Score"
 
 [node name="CurrentScore" type="Label" parent="HUD"]
 margin_left = 90.0
-margin_top = 13.0
+margin_top = 15.0
 margin_right = 98.0
-margin_bottom = 27.0
+margin_bottom = 29.0
 text = "0"
 
 [node name="Label" type="Label" parent="HUD"]
 margin_left = 102.0
-margin_top = 13.0
+margin_top = 15.0
 margin_right = 102.0
-margin_bottom = 27.0
+margin_bottom = 29.0
 
 [node name="Countdown" type="Label" parent="HUD"]
 margin_left = 106.0
-margin_top = 13.0
+margin_top = 15.0
 margin_right = 106.0
-margin_bottom = 27.0
+margin_bottom = 29.0
+
+[node name="Health" type="HBoxContainer" parent="HUD"]
+margin_left = 110.0
+margin_right = 391.0
+margin_bottom = 45.0
+script = ExtResource( 9 )
+
+[node name="1" type="TextureRect" parent="HUD/Health"]
+margin_right = 53.0
+margin_bottom = 45.0
+texture = ExtResource( 8 )
+stretch_mode = 3
+
+[node name="2" type="TextureRect" parent="HUD/Health"]
+margin_left = 57.0
+margin_right = 110.0
+margin_bottom = 45.0
+texture = ExtResource( 8 )
+stretch_mode = 3
+
+[node name="3" type="TextureRect" parent="HUD/Health"]
+margin_left = 114.0
+margin_right = 167.0
+margin_bottom = 45.0
+texture = ExtResource( 8 )
+stretch_mode = 3
+
+[node name="4" type="TextureRect" parent="HUD/Health"]
+margin_left = 171.0
+margin_right = 224.0
+margin_bottom = 45.0
+texture = ExtResource( 8 )
+stretch_mode = 3
+
+[node name="5" type="TextureRect" parent="HUD/Health"]
+margin_left = 228.0
+margin_right = 281.0
+margin_bottom = 45.0
+texture = ExtResource( 8 )
+stretch_mode = 3
 
 [node name="Border_Left" type="Area2D" parent="." groups=["left"]]
 position = Vector2( -1.53629, 369.479 )
