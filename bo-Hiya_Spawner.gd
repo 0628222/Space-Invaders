@@ -15,7 +15,7 @@ func _process(delta):
 		timer_started = true
 
 
-func _on_Bo_hiya_timeout():
+func _on_bo_hiya_timeout():
 	randomize()
 	var aPow = powerup.instance()
 	var aPos = Vector2()

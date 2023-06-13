@@ -4,20 +4,20 @@
 [ext_resource path="res://Bullet-Enemy/bullet-Special-Enemy.gd" type="Script" id=2]
 
 [sub_resource type="LineShape2D" id=1]
-normal = Vector2( 0.0841136, -0.996456 )
-d = 59.4816
+normal = Vector2( 0.0617082, -0.998094 )
+d = 79.0946
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 677, 198 )
+position = Vector2( 1090, 332 )
 rotation = 2.11568
-scale = Vector2( 0.372876, 0.236889 )
+scale = Vector2( 0.209617, 0.136825 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -401, -645 )
-rotation = -0.908728
-scale = Vector2( 2.48505, -23.9317 )
+rotation = -0.974832
+scale = Vector2( 1.85956, -23.215 )
 shape = SubResource( 1 )

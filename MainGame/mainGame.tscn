@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://MainGame/mainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
-[ext_resource path="res://Player/bo-Hiya_Spawner.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Images/hud_heartFull.png" type="Texture" id=8]
 [ext_resource path="res://MainGame/Health.gd" type="Script" id=9]
 [ext_resource path="res://Images/AnimeSchoolRooftop.jpg" type="Texture" id=10]
@@ -246,5 +245,3 @@ position = Vector2( -472.219, 404.428 )
 position = Vector2( 1.54972e-06, -5.96046e-08 )
 stream = ExtResource( 1 )
 autoplay = true
-
-[node name="Bo-Hiya_Spawner" parent="." instance=ExtResource( 7 )]

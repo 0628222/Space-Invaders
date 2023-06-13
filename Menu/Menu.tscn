@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MainGame/Noto_Sans_Cham/NotoSansCham-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Player/Oswald/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ezgif.com-gif-maker(4).png" type="Texture" id=8]
 [ext_resource path="res://ezgif.com-gif-maker(6).png" type="Texture" id=9]
 [ext_resource path="res://Images/Odawara.jpeg" type="Texture" id=10]
+[ext_resource path="res://Player/bo-Hiya_Spawner.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=4]
 size = 50
@@ -199,12 +200,14 @@ scale = Vector2( 0.738294, 0.69681 )
 texture = ExtResource( 9 )
 hframes = 5
 vframes = 2
-frame = 8
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Opening GIF"
 "anims/Opening GIF" = SubResource( 2 )
 anims/RESET = SubResource( 6 )
+
+[node name="bo-Hiya-Timer" parent="." instance=ExtResource( 11 )]
 
 [connection signal="pressed" from="Layout/Main/Buttons/GameScenes/Start Game Button" to="Layout/Main/Buttons/GameScenes/Start Game Button" method="_on_Start_Game_Button_pressed"]
 [connection signal="pressed" from="Layout/Main/Buttons/GameScenes/Options" to="Layout/Main/Buttons/GameScenes/Options" method="_on_Options_pressed"]

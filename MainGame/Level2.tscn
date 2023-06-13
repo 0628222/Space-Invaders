@@ -1,14 +1,15 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://MainGame/mainGame.gd" type="Script" id=2]
+[ext_resource path="res://MainGame/Level2.gd" type="Script" id=2]
 [ext_resource path="res://Enemy/specialEnemy.gd" type="Script" id=3]
+[ext_resource path="res://MainGameSpecialEnemyGIF.tres" type="Animation" id=4]
 [ext_resource path="res://Images/SpecialFiring.png" type="Texture" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20.9622, 380.576 )
+extents = Vector2( 33.4811, 380.576 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 662.058, 10 )
@@ -30,31 +31,37 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 33, 50 ]
 }
-
-[sub_resource type="Animation" id=5]
-resource_name = "SpecialEnemyGIF"
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("special_Enemy/Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 35, 55 ]
+"values": [ 34 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../AnimationPlayer:root_node")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ NodePath("../Sprite") ]
 }
 
-[node name="SpaceInvaders" type="Control"]
-margin_left = -186.0
-margin_top = 50.0
-margin_right = 1094.0
-margin_bottom = 770.0
+[node name="Level2" type="Control"]
+margin_left = -12.0
+margin_top = 4.0
+margin_right = 1268.0
+margin_bottom = 724.0
 script = ExtResource( 2 )
-countdownMax = 60
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_right = 40.0
@@ -88,18 +95,21 @@ margin_top = 13.0
 margin_right = 106.0
 margin_bottom = 27.0
 
-[node name="Border_Left" type="Area2D" parent="." groups=["left"]]
-position = Vector2( -1.53629, 369.479 )
+[node name="Border_Left2" type="Area2D" parent="." groups=["left", "left2"]]
+position = Vector2( 183, 339 )
+collision_layer = 3
+collision_mask = 65535
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( -5.37704, -0.768158 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left2"]
+position = Vector2( -204.464, 31.521 )
 shape = SubResource( 1 )
 
-[node name="Border_Right" type="Area2D" parent="." groups=["right"]]
-position = Vector2( 1287.42, 368.711 )
+[node name="Border_Right2" type="Area2D" parent="." groups=["right", "right2"]]
+position = Vector2( 1233, 361 )
+collision_mask = 65535
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
-position = Vector2( -5.37704, -0.768158 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right2"]
+position = Vector2( 72.58, -21.711 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -111,7 +121,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=["top"]]
-position = Vector2( 0, 1 )
+position = Vector2( 22.066, 13.955 )
 shape = SubResource( 2 )
 
 [node name="Border_Bottom" type="KinematicBody2D" parent="." groups=["bottom"]]
@@ -120,7 +130,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=["top"]]
-position = Vector2( 0, 1 )
+position = Vector2( 12.066, -28.484 )
 shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -131,25 +141,27 @@ autoplay = true
 [node name="special_Enemy" type="KinematicBody2D" parent="."]
 position = Vector2( -917, 38 )
 scale = Vector2( 0.837702, 0.896138 )
+collision_mask = 65535
+collision/safe_margin = 0.001
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="special_Enemy"]
-position = Vector2( 1390.71, 116.054 )
+position = Vector2( 1847.14, 36.3696 )
 rotation = 1.55982
 scale = Vector2( 16.4923, 6.4206 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="special_Enemy"]
-root_node = NodePath("../../AudioStreamPlayer2D")
-autoplay = "SpecialEnemyGIF"
-anims/RESET = SubResource( 4 )
-anims/SpecialEnemyGIF = SubResource( 5 )
-
 [node name="Sprite" type="Sprite" parent="special_Enemy"]
-position = Vector2( 1390.72, 114.573 )
-rotation = 4.71633
+position = Vector2( 1844.91, 33.7043 )
+rotation = -1.56686
 scale = Vector2( 0.393207, -0.581976 )
 texture = ExtResource( 5 )
 hframes = 5
 vframes = 14
-frame = 33
+frame = 34
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="special_Enemy"]
+root_node = NodePath("../Sprite")
+autoplay = "SpecialEnemyGIF"
+anims/RESET = SubResource( 4 )
+anims/SpecialEnemyGIF = ExtResource( 4 )

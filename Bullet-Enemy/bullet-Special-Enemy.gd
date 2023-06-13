@@ -2,11 +2,11 @@ extends KinematicBody2D
 
 
 
-var speed = 100
+var speed = 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	GlobalVariables.enemyBulletInstanceCount += 1
+	GlobalVariables.enemyBulletInstanceCount += 5
 	set_physics_process(true)
 
 
