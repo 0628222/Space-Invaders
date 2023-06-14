@@ -17,7 +17,7 @@ func _ready():
 		currentTimer = currentTimer - 1 
 		print(currentTimer)
 	print("Game Over")
-	get_tree().change_scene("res://mainGame/lose.tscn")
+	#get_tree().change_scene("res://MainGame/lose.tscn")
 #this checks the scoring system and if all enemies are dead then go on to level 2 
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
